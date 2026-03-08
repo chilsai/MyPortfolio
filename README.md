@@ -22,7 +22,6 @@ MyPortfolio/
 ├── index.html                 # Main single-page portfolio
 ├── blog/
 │   ├── architect-to-agentblazer.html
-│   └── lwc-datatable-guide.html
 ├── .nojekyll                  # Bypass Jekyll on GitHub Pages
 ├── .gitignore
 └── README.md

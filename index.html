@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Sagar Chilakapati — Technical Architect</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Sai Sagar Chilakapati — 13+ years architecting Salesforce solutions, Agentforce, AI Agents, and enterprise integrations." />
+  <meta name="author" content="Sai Sagar Chilakapati" />
+  <link rel="canonical" href="https://chilsai.github.io/MyPortfolio/" />
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sai Sagar Chilakapati — Technical Architect" />
+  <meta property="og:description" content="13+ years architecting Salesforce solutions, Agentforce, AI Agents, and enterprise integrations." />
+  <meta property="og:url" content="https://chilsai.github.io/MyPortfolio/" />
+  <meta property="og:image" content="https://profile.digital.salesforce.com/images/p/0058W00000DXmXdQAL/1750990976/F" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sai Sagar Chilakapati — Technical Architect" />
+  <meta name="twitter:description" content="13+ years architecting Salesforce solutions, Agentforce, AI Agents, and enterprise integrations." />
+  <meta name="twitter:image" content="https://profile.digital.salesforce.com/images/p/0058W00000DXmXdQAL/1750990976/F" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect rx='14' width='64' height='64' fill='%230b5cab'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-size='34' font-weight='700' fill='white'>SC</text></svg>" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@salesforce-ux/design-system@2.29.0/assets/styles/salesforce-lightning-design-system.min.css" />
+  <style>
+    :root {
+      /* ── SLDS 2 Cosmos-inspired palette ── */
+      --brand: #0b5cab;
+      --brand-light: #1b96ff;
+      --brand-dark: #032d60;
+      --brand-bg: #eef4ff;
+      --surface: #ffffff;
+      --surface-alt: #f4f6f9;
+      --surface-container: #eef1f6;
+      --text-primary: #181818;
+      --text-secondary: #514f4d;
+      --text-inverse: #ffffff;
+      --border: #d8dde6;
+      --border-strong: #c9c7c5;
+      --accent-green: #2e844a;
+      --accent-green-bg: #e6f6ec;
+      --accent-orange: #dd7a01;
+      --accent-orange-bg: #fef0e0;
+      --shadow-1: 0 1px 4px rgba(0,0,0,.05);
+      --shadow-2: 0 4px 12px rgba(0,0,0,.07);
+      --shadow-3: 0 8px 24px rgba(0,0,0,.1);
+      --shadow-4: 0 12px 40px rgba(0,0,0,.14);
+      --radius-1: .5rem;
+      --radius-2: .75rem;
+      --radius-3: 1rem;
+      --radius-pill: 100px;
+      --radius-circle: 50%;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 64px;
+    }
+
+    body {
+      font-family: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-primary);
+      background: var(--surface-alt);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Sticky Nav (Cosmos) ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-1);
+      transition: box-shadow .3s;
+    }
+    .navbar__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .85rem 1.5rem;
+    }
+    .navbar__brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--brand);
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .navbar__links {
+      display: flex;
+      gap: .35rem;
+      list-style: none;
+    }
+    .navbar__links a {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: .45rem .85rem;
+      border-radius: var(--radius-pill);
+      transition: background .2s, color .2s;
+    }
+    .navbar__links a:hover,
+    .navbar__links a.active {
+      background: var(--brand-bg);
+      color: var(--brand);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: .4rem;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-primary);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: .3s;
+    }
+
+    /* ── Sections (Cosmos spacing) ── */
+    .section { padding: 5.5rem 1.5rem 4.5rem; }
+    .section--alt { background: var(--surface); }
+    .section__inner { max-width: 1000px; margin: 0 auto; }
+    .section__heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 2.25rem;
+      color: var(--text-primary);
+      position: relative;
+      padding-bottom: .75rem;
+    }
+    .section__heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-light));
+      border-radius: var(--radius-pill);
+    }
+
+    /* ── Hero (Cosmos) ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(150deg, #032d60 0%, #0b5cab 40%, #1b96ff 100%);
+      color: var(--text-inverse);
+      text-align: center;
+      padding: 6rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: var(--radius-circle);
+      background: radial-gradient(circle, rgba(27,150,255,.2) 0%, transparent 70%);
+      top: -200px;
+      right: -150px;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: var(--radius-circle);
+      background: radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 70%);
+      bottom: -100px;
+      left: -100px;
+      pointer-events: none;
+    }
+    .hero > div { position: relative; z-index: 1; }
+    .hero__avatar {
+      width: 148px;
+      height: 148px;
+      border-radius: var(--radius-circle);
+      margin: 0 auto 1.75rem;
+      border: 4px solid rgba(255,255,255,.25);
+      object-fit: cover;
+      box-shadow: 0 8px 32px rgba(0,0,0,.25);
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: .5rem;
+    }
+    .hero__title {
+      font-size: 1.15rem;
+      opacity: .9;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+    .hero__summary {
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      font-size: .95rem;
+      line-height: 1.7;
+      opacity: .85;
+    }
+    .hero__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.25);
+      padding: .7rem 1.5rem;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      font-size: .85rem;
+      font-weight: 600;
+      transition: background .2s, transform .15s;
+    }
+    .hero__cta:hover { background: rgba(255,255,255,.22); transform: translateY(-1px); }
+    .hero__contact {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: .85rem;
+      opacity: .8;
+    }
+    .hero__contact a { color: #fff; text-decoration: none; }
+    .hero__contact a:hover { text-decoration: underline; }
+
+    /* ── Skills / Badges (Cosmos) ── */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+    }
+    .skill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .55rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: border-color .2s, box-shadow .2s, transform .15s;
+    }
+    .skill-badge:hover {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(11,92,171,.08);
+      transform: translateY(-1px);
+    }
+    .skill-badge__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-circle);
+      flex-shrink: 0;
+    }
+    .dot--blue { background: var(--brand-light); }
+    .dot--green { background: var(--accent-green); }
+    .dot--orange { background: var(--accent-orange); }
+
+    /* ── Certifications (Cosmos) ── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.1rem;
+    }
+    .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-2);
+      padding: 1.35rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: box-shadow .25s, border-color .25s, transform .2s;
+    }
+    .cert-card:hover {
+      box-shadow: var(--shadow-3);
+      border-color: var(--brand);
+      transform: translateY(-2px);
+    }
+    .cert-icon {
+      flex-shrink: 0;
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-1);
+      object-fit: contain;
+    }
+    .cert-card h4 {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .cert-card p {
+      font-size: .78rem;
+      color: var(--text-secondary);
+      margin-top: .2rem;
+    }
+
+    /* ── Timeline (Cosmos) ── */
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 7px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--brand-light), var(--border));
+      border-radius: var(--radius-pill);
+    }
+    .timeline__item {
+      position: relative;
+      padding-bottom: 2.75rem;
+    }
+    .timeline__item:last-child { padding-bottom: 0; }
+    .timeline__dot {
+      position: absolute;
+      left: -2rem;
+      top: .35rem;
+      width: 16px;
+      height: 16px;
+      border-radius: var(--radius-circle);
+      background: linear-gradient(135deg, var(--brand), var(--brand-light));
+      border: 3px solid var(--surface-alt);
+      box-shadow: 0 0 0 3px rgba(11,92,171,.1);
+    }
+    .section--alt .timeline__dot { border-color: var(--surface); }
+    .timeline__header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: .5rem;
+      margin-bottom: .25rem;
+    }
+    .timeline__company {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .timeline__role {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--brand);
+    }
+    .timeline__meta {
+      font-size: .78rem;
+      color: var(--text-secondary);
+      margin-bottom: .75rem;
+    }
+    .timeline__bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .timeline__bullets li {
+      font-size: .85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .timeline__bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: .6em;
+      width: 6px;
+      height: 6px;
+      border-radius: var(--radius-circle);
+      background: var(--brand-light);
+    }
+
+    /* ── Projects (Cosmos) ── */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-2);
+      padding: 1.5rem;
+      transition: box-shadow .25s, transform .2s, border-color .25s;
+    }
+    .project-card:hover {
+      box-shadow: var(--shadow-3);
+      transform: translateY(-3px);
+      border-color: var(--accent-green);
+    }
+    .project-card__tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--accent-green);
+      background: var(--accent-green-bg);
+      padding: .25rem .7rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: .75rem;
+    }
+    .project-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    .project-card p {
+      font-size: .85rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ── Blog (Cosmos) ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .blog-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-2);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .25s, transform .2s, border-color .25s;
+    }
+    .blog-card:hover {
+      box-shadow: var(--shadow-3);
+      transform: translateY(-3px);
+      border-color: var(--brand);
+    }
+    .blog-card__tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: .25rem .7rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: .75rem;
+      width: fit-content;
+    }
+    .blog-card__tag--medium {
+      color: var(--accent-orange);
+      background: var(--accent-orange-bg);
+    }
+    .blog-card__tag--article {
+      color: var(--brand);
+      background: var(--brand-bg);
+    }
+    .blog-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+      line-height: 1.4;
+    }
+    .blog-card p {
+      font-size: .85rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .blog-card__meta {
+      font-size: .75rem;
+      color: var(--text-secondary);
+      margin-top: .75rem;
+      padding-top: .75rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .blog-card__link {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--brand);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      transition: gap .2s;
+    }
+    .blog-card__link:hover { gap: .5rem; }
+
+    /* ── Education (Cosmos) ── */
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-2);
+      padding: 1.75rem;
+      max-width: 500px;
+      transition: box-shadow .25s;
+    }
+    .edu-card:hover { box-shadow: var(--shadow-2); }
+    .edu-card h4 { font-size: 1rem; font-weight: 700; }
+    .edu-card p { font-size: .85rem; color: var(--text-secondary); margin-top: .3rem; }
+
+    /* ── Footer (Cosmos) ── */
+    .footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-size: .78rem;
+      color: var(--text-secondary);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Fade-in animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive (Cosmos) ── */
+    @media (max-width: 768px) {
+      .navbar__links { display: none; }
+      .navbar__links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: .75rem;
+        box-shadow: var(--shadow-3);
+        border-radius: 0 0 var(--radius-2) var(--radius-2);
+      }
+      .hamburger { display: block; }
+      .hero h1 { font-size: 2rem; }
+      .hero__title { font-size: 1rem; }
+      .hero::before, .hero::after { display: none; }
+      .section { padding: 3.5rem 1.25rem 3rem; }
+      .section__heading { font-size: 1.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav class="navbar" role="navigation">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__brand">Sai Sagar Chilakapati</a>
+      <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.navbar__links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__links">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero" class="hero">
+    <div>
+      <img class="hero__avatar" src="https://profile.digital.salesforce.com/images/p/0058W00000DXmXdQAL/1750990976/F" alt="Sai Sagar Chilakapati" />
+      <h1>Sai Sagar Chilakapati</h1>
+      <p class="hero__title">Technical Architect @ Salesforce</p>
+      <p style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.35rem 1rem;border-radius:100px;font-size:.8rem;font-weight:700;letter-spacing:.03em;margin-bottom:.75rem;backdrop-filter:blur(8px);">
+        &#9889; Agentblazer Legend
+      </p>
+      <p class="hero__summary">
+        Certified Salesforce Application &amp; System Architect with 13+ years of experience
+        building enterprise-grade solutions. Now architecting the next wave of intelligent
+        automation with Agentforce, Generative AI, and autonomous AI Agents — transforming
+        how businesses operate across Health Care, Manufacturing, and Financial Services.
+      </p>
+      <a href="#experience" class="hero__cta">View My Work &darr;</a>
+      <div class="hero__contact">
+        <span>Holly Springs, NC</span>
+        <a href="mailto:chilsaisagar@gmail.com">chilsaisagar@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sai-sagar-chilakapati-084b563a" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.salesforce.com/trailblazer/csaisagar" target="_blank" rel="noopener">Trailblazer Profile
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section id="skills" class="section">
+    <div class="section__inner fade-in">
+      <h2 class="section__heading">Skills &amp; Expertise</h2>
+      <h3 style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand);margin-bottom:.75rem;">AI &amp; Agents</h3>
+      <div class="skills-grid" style="margin-bottom:1.5rem;">
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>Agentforce</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>Generative AI</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>AI Agents</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>Prompt Engineering</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>RAG</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>MCP</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>Agent Orchestration</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--blue"></span>n8n</span>
+      </div>
+      <h3 style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-green);margin-bottom:.75rem;">Salesforce Platform</h3>
+      <div class="skills-grid" style="margin-bottom:1.5rem;">
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Salesforce Architecture</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Lightning Web Components</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Apex Development</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Salesforce CPQ</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Conga CPQ &amp; CLM</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Service Cloud</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Service Cloud Voice (BYOT)</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Omni-Channel Routing</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Field Service</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Batch Apex</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--green"></span>Metadata Management</span>
+      </div>
+      <h3 style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-orange);margin-bottom:.75rem;">Engineering &amp; Integration</h3>
+      <div class="skills-grid">
+        <span class="skill-badge"><span class="skill-badge__dot dot--orange"></span>CI/CD Pipelines</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--orange"></span>REST API Integrations</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--orange"></span>Enterprise Integration</span>
+        <span class="skill-badge"><span class="skill-badge__dot dot--orange"></span>Heroku</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Certifications ── -->
+  <section id="certifications" class="section section--alt">
+    <div class="section__inner fade-in">
+      <h2 class="section__heading">Certifications</h2>
+      <p style="margin-bottom:1.25rem;font-size:.9rem;color:var(--text-secondary);">
+        <strong style="color:var(--brand);font-size:1.5rem;vertical-align:middle;">23</strong>
+        Salesforce Certifications &mdash;
+        <a href="https://www.salesforce.com/trailblazer/csaisagar" target="_blank" rel="noopener"
+           style="color:var(--brand);font-weight:600;text-decoration:none;">View all on Trailhead &rarr;</a>
+      </p>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img class="cert-icon" src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MA14b&oid=00DF0000000gZsu&lastMod=1746774124000" alt="Agentblazer Specialist Badge" />
+          <div>
+            <h4>Agentblazer Specialist</h4>
+            <p>Salesforce</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <img class="cert-icon" src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAGWf&oid=00DF0000000gZsu&lastMod=1746780435000" alt="System Architect Badge" />
+          <div>
+            <h4>Salesforce Certified System Architect</h4>
+            <p>Salesforce</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <img class="cert-icon" src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MA3cf&oid=00DF0000000gZsu&lastMod=1746774357000" alt="Application Architect Badge" />
+          <div>
+            <h4>Salesforce Certified Application Architect</h4>
+            <p>Salesforce</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <img class="cert-icon" src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000M9w3J&oid=00DF0000000gZsu&lastMod=1746772244000" alt="Platform Developer II Badge" />
+          <div>
+            <h4>Salesforce Platform Developer II</h4>
+            <p>Salesforce</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section id="experience" class="section">
+    <div class="section__inner fade-in">
+      <h2 class="section__heading">Professional Experience</h2>
+      <div class="timeline">
+
+        <!-- Salesforce -->
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <span class="timeline__company">Salesforce</span>
+            <span class="timeline__role">Technical Architect</span>
+          </div>
+          <div class="timeline__meta">May 2023 — Present &middot; Holly Springs, NC</div>
+          <ul class="timeline__bullets">
+            <li>Serving as Technical Architect driving platform-level solutions for enterprise customers.</li>
+          </ul>
+        </div>
+
+        <!-- CommerceCX — TA -->
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <span class="timeline__company">CommerceCX</span>
+            <span class="timeline__role">Technical Architect</span>
+          </div>
+          <div class="timeline__meta">Oct 2019 — May 2023 &middot; 3 yr 8 mo &middot; Cary, NC</div>
+          <ul class="timeline__bullets">
+            <li>Architect and technical lead for tablet/mobile applications.</li>
+            <li>Led CPQ/CLM implementation projects for enterprise customers in Health Care and Manufacturing.</li>
+            <li>Built Lightning Web Components that reduced contract amendment time from 8.34 min to under 60 sec — a 300% efficiency gain.</li>
+            <li>Designed an Apex Batch Framework with chaining and parallelism, cutting processing time by 66%.</li>
+            <li>Implemented Salesforce Service Cloud Voice (BYOT) for an Automobile industry client, designing end-to-end IVR flows for inbound service requests that significantly improved customer satisfaction.</li>
+            <li>Configured Omni-Channel Routing to intelligently route customer calls to the right agents in Salesforce, reducing wait times and improving first-call resolution.</li>
+            <li>Deployed Salesforce Field Service to manage on-site technician scheduling, appointments, and work orders — streamlining field operations.</li>
+            <li>Architected and shipped an AppExchange-listed Pricing Extension package, delivering plug-and-play advanced pricing capabilities for Salesforce CPQ and Conga CPQ customers.</li>
+          </ul>
+        </div>
+
+        <!-- CommerceCX — Sr Dev -->
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <span class="timeline__company">CommerceCX</span>
+            <span class="timeline__role">Senior Salesforce Developer</span>
+          </div>
+          <div class="timeline__meta">Sep 2018 — Sep 2019 &middot; 1 yr 1 mo &middot; Utrecht, Netherlands</div>
+          <ul class="timeline__bullets">
+            <li>Technical Architect for a 15-member team on a Conga CPQ, CLM &amp; Order project rolled out to 700+ users across 8 countries.</li>
+            <li>Designed Batch Apex for post-load processing of migrated contract and asset data.</li>
+          </ul>
+        </div>
+
+        <!-- Adobe -->
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <span class="timeline__company">Adobe</span>
+            <span class="timeline__role">Senior Software Engineer</span>
+          </div>
+          <div class="timeline__meta">Oct 2016 — Jun 2018 &middot; 1 yr 9 mo</div>
+          <ul class="timeline__bullets">
+            <li>Recognized as top 5% employee by senior executives (2018).</li>
+            <li>2nd Prize at Tech Summit for Impact Analyzer product over 15 competing products.</li>
+            <li>Lead Salesforce Platform engineer managing two production orgs with ~13 MB Apex usage (5x default limit).</li>
+            <li>Built CI/CD pipeline for Salesforce releases across a 40-developer team with automated code review.</li>
+            <li>Reduced Sandbox post-refresh downtime from 3 days to 8 hours via automation.</li>
+            <li>Developed Impact Analyzer — a metadata analysis tool that cut analysis time by 3x.</li>
+          </ul>
+        </div>
+
+        <!-- Deloitte -->
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <span class="timeline__company">Deloitte</span>
+            <span class="timeline__role">Consultant</span>
+          </div>
+          <div class="timeline__meta">Sep 2015 — Sep 2016 &middot; 1 yr 1 mo &middot; Bengaluru, India</div>
+          <ul class="timeline__bullets">
+            <li>Integrated Salesforce with legacy systems via REST API using configurable XML payloads.</li>
+            <li>Designed Lightning Aura components for chemical waste management and billing processes.</li>
+          </ul>
+        </div>
+
+        <!-- Wipro -->
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <span class="timeline__company">Wipro</span>
+            <span class="timeline__role">Software Developer</span>
+          </div>
+          <div class="timeline__meta">Jun 2012 — Aug 2015 &middot; 3 yr 3 mo &middot; Pune, India</div>
+          <ul class="timeline__bullets">
+            <li>Integrated Salesforce with CTI Toolkit — customized screen popups cut call duration by 50%.</li>
+            <li>Implemented Salesforce Service Cloud for banking client using Case and Knowledge management.</li>
+            <li>Integrated Salesforce with SAP (MDM) for Account and Asset data synchronization.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Personal Projects ── -->
+  <section id="projects" class="section section--alt">
+    <div class="section__inner fade-in">
+      <h2 class="section__heading">Personal Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <span class="project-card__tag">Open Source</span>
+          <h4>Skebot — Simplify Salesforce Deployments</h4>
+          <p>
+            A cloud-based solution for Salesforce deployments — deploy components directly
+            from the browser with zero additional software. Built with JavaScript, HTML &amp; CSS
+            and hosted on Heroku.
+          </p>
+          <a href="https://github.com/chilsai/Skebot" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:.35rem;margin-top:.75rem;font-size:.8rem;font-weight:600;color:var(--brand);text-decoration:none;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub &rarr;
+          </a>
+        </div>
+        <div class="project-card">
+          <span class="project-card__tag">Open Source</span>
+          <h4>LWC Datatable — Generic Data Table Component</h4>
+          <p>
+            A reusable Lightning Web Component providing a feature-rich data table with
+            pagination, row selection, static headers, and global search — plug-and-play
+            for any Salesforce org.
+          </p>
+          <a href="https://github.com/chilsai/LWC-Datatable" target="_blank" rel="noopener"
+             style="display:inline-flex;align-items:center;gap:.35rem;margin-top:.75rem;font-size:.8rem;font-weight:600;color:var(--brand);text-decoration:none;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub &rarr;
+          </a>
+        </div>
+        <div class="project-card">
+          <span class="project-card__tag">In Development</span>
+          <h4>Open Source Community Portal</h4>
+          <p>
+            Building a community portal to foster collaboration and knowledge sharing
+            among Salesforce developers and administrators.
+          </p>
+        </div>
+        <div class="project-card">
+          <span class="project-card__tag">Product</span>
+          <h4>Impact Analyzer</h4>
+          <p>
+            A Salesforce-native app that performs metadata analysis to identify unused
+            or redundant components — reducing analysis time by 3x. Won 2nd place at
+            Adobe's Tech Summit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Blog ── -->
+  <section id="blog" class="section">
+    <div class="section__inner fade-in">
+      <h2 class="section__heading">Blog</h2>
+      <div class="blog-grid">
+
+        <div class="blog-card">
+          <span class="blog-card__tag blog-card__tag--medium">Medium</span>
+          <h4>Understanding Text Generation: From Markov Chains to GPT</h4>
+          <p>
+            Tracing the evolution of text generation — from simple Markov Chains
+            to the transformer-based GPT models powering today's AI revolution.
+          </p>
+          <div class="blog-card__meta">
+            <span>Medium</span>
+            <a class="blog-card__link" href="https://medium.com/@sschilakapati/understanding-text-generation-from-markov-chains-to-gpt-106156aee152" target="_blank" rel="noopener">
+              Read on Medium &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <span class="blog-card__tag blog-card__tag--medium">Medium</span>
+          <h4>Quick Start on Salesforce Service Cloud Voice (SCV)</h4>
+          <p>
+            A practical guide to getting started with Service Cloud Voice — setup,
+            configuration, and key considerations for BYOT implementations.
+          </p>
+          <div class="blog-card__meta">
+            <span>Medium</span>
+            <a class="blog-card__link" href="https://medium.com/@sschilakapati/quick-start-on-salesforce-service-cloud-voice-scv-4dcdc18db8f7" target="_blank" rel="noopener">
+              Read on Medium &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <span class="blog-card__tag blog-card__tag--medium">Medium</span>
+          <h4>LWC Datatable — Generic Data Table with Pagination &amp; Search</h4>
+          <p>
+            Building a reusable Lightning Web Component data table with pagination,
+            row selection, static headers, and global search.
+          </p>
+          <div class="blog-card__meta">
+            <span>Medium</span>
+            <a class="blog-card__link" href="https://medium.com/@sschilakapati/lwc-datatable-e2da2eb503d9" target="_blank" rel="noopener">
+              Read on Medium &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Hidden for now — re-enable when content is ready
+        <div class="blog-card">
+          <span class="blog-card__tag blog-card__tag--article">Article</span>
+          <h4>From Architect to Agentblazer: My Journey with Salesforce AI</h4>
+          <p>
+            Reflections on transitioning from traditional Salesforce architecture
+            to designing AI-driven solutions and what it means for the ecosystem.
+          </p>
+          <div class="blog-card__meta">
+            <span>On-site</span>
+            <a class="blog-card__link" href="blog/architect-to-agentblazer.html">
+              Read Article &rarr;
+            </a>
+          </div>
+        </div>
+        -->
+
+        <div class="blog-card">
+          <span class="blog-card__tag blog-card__tag--medium">Medium</span>
+          <h4>Right Way to Generate Unit Tests Using AI</h4>
+          <p>
+            Best practices and practical techniques for leveraging AI to generate
+            reliable, meaningful unit tests — the right way.
+          </p>
+          <div class="blog-card__meta">
+            <span>Medium</span>
+            <a class="blog-card__link" href="https://medium.com/@sschilakapati/right-way-to-generate-unit-test-using-ai-afc1b858bb03" target="_blank" rel="noopener">
+              Read on Medium &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Education ── -->
+  <section id="education" class="section section--alt">
+    <div class="section__inner fade-in">
+      <h2 class="section__heading">Education</h2>
+      <div class="edu-card">
+        <h4>Bachelor's Degree — Biotechnology</h4>
+        <p>Sri Vidyaniketan Engineering College, Tirupathi</p>
+        <p>2008 — 2012</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact" class="section">
+    <div class="section__inner fade-in" style="text-align:center;">
+      <h2 class="section__heading" style="display:inline-block;">Get in Touch</h2>
+      <p style="max-width:520px;margin:0 auto 1.5rem;font-size:.92rem;color:var(--text-secondary);">
+        Interested in collaborating or have a question? Feel free to reach out.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:chilsaisagar@gmail.com" class="hero__cta" style="background:linear-gradient(135deg,var(--brand),var(--brand-light));border-color:transparent;box-shadow:0 4px 14px rgba(11,92,171,.25);">
+          Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/sai-sagar-chilakapati-084b563a" target="_blank" rel="noopener"
+           class="hero__cta" style="background:transparent;color:var(--brand);border-color:var(--brand);">
+          LinkedIn Profile
+        </a>
+        <a href="https://www.salesforce.com/trailblazer/csaisagar" target="_blank" rel="noopener"
+           class="hero__cta" style="background:transparent;color:var(--brand);border-color:var(--brand);">
+          Trailblazer Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    &copy; 2026 Sai Sagar Chilakapati. Built with Salesforce Lightning Design System 2.
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    // Active nav link highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar__links a');
+
+    function updateActiveLink() {
+      const scrollY = window.scrollY + 80;
+      sections.forEach((sec) => {
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+        const link = document.querySelector(`.navbar__links a[href="#${id}"]`);
+        if (link) {
+          if (scrollY >= top && scrollY < top + height) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        }
+      });
+    }
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    updateActiveLink();
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.navbar__links a').forEach((a) => {
+      a.addEventListener('click', () => {
+        document.querySelector('.navbar__links').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

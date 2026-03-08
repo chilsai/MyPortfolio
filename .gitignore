@@ -1,0 +1,13 @@
+# Local-only files
+Profile (1).pdf
+Profile Photo.jpg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+*~

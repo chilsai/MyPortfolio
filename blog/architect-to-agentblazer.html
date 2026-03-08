@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Architect to Agentblazer — Sai Sagar Chilakapati</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@salesforce-ux/design-system@2.29.0/assets/styles/salesforce-lightning-design-system.min.css" />
+  <style>
+    :root {
+      --brand: #0b5cab;
+      --brand-light: #1b96ff;
+      --brand-dark: #032d60;
+      --brand-bg: #eef4ff;
+      --surface: #ffffff;
+      --surface-alt: #f4f6f9;
+      --text-primary: #181818;
+      --text-secondary: #514f4d;
+      --border: #d8dde6;
+      --radius-2: .75rem;
+      --radius-pill: 100px;
+      --shadow-1: 0 1px 4px rgba(0,0,0,.05);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-primary);
+      background: var(--surface-alt);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .blog-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-1);
+    }
+    .blog-nav__inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .85rem 1.5rem;
+    }
+    .blog-nav__brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--brand);
+      text-decoration: none;
+    }
+    .blog-nav__back {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: .4rem .85rem;
+      border-radius: var(--radius-pill);
+      transition: background .2s, color .2s;
+    }
+    .blog-nav__back:hover {
+      background: var(--brand-bg);
+      color: var(--brand);
+    }
+    .blog-article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+    .blog-article__tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--brand);
+      background: var(--brand-bg);
+      padding: .25rem .7rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1rem;
+    }
+    .blog-article h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.25;
+      margin-bottom: .75rem;
+    }
+    .blog-article__meta {
+      font-size: .85rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-article h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+      color: var(--text-primary);
+    }
+    .blog-article p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+    }
+    .blog-article ul, .blog-article ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+      color: var(--text-secondary);
+    }
+    .blog-article li {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: .5rem;
+    }
+    .blog-article blockquote {
+      border-left: 3px solid var(--brand-light);
+      padding: .75rem 1.25rem;
+      margin: 1.5rem 0;
+      background: var(--brand-bg);
+      border-radius: 0 var(--radius-2) var(--radius-2) 0;
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+    .blog-article code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      background: var(--surface-alt);
+      padding: .15rem .4rem;
+      border-radius: .25rem;
+      font-size: .9em;
+    }
+    .blog-footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: .78rem;
+      color: var(--text-secondary);
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 768px) {
+      .blog-article h1 { font-size: 1.6rem; }
+      .blog-article { padding: 2.5rem 1.25rem 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="blog-nav">
+    <div class="blog-nav__inner">
+      <a href="../index.html#blog" class="blog-nav__brand">Sai Sagar Chilakapati</a>
+      <a href="../index.html#blog" class="blog-nav__back">&larr; Back to Portfolio</a>
+    </div>
+  </nav>
+
+  <article class="blog-article">
+    <span class="blog-article__tag">Article</span>
+    <h1>From Architect to Agentblazer: My Journey with Salesforce AI</h1>
+    <div class="blog-article__meta">
+      By Sai Sagar Chilakapati &middot; February 2026 &middot; 5 min read
+    </div>
+
+    <p>
+      For over a decade, my career has been rooted in Salesforce architecture — designing
+      scalable solutions, building Lightning components, and leading enterprise implementations
+      across industries like Health Care, Manufacturing, and Financial Services. But in the
+      last couple of years, something shifted.
+    </p>
+
+    <h2>The Shift to AI-First Thinking</h2>
+
+    <p>
+      When Salesforce introduced Agentforce, it wasn't just another product launch. It was a
+      fundamental rethinking of how we approach automation. Instead of rigid workflows and
+      rule-based logic, we could now design autonomous agents that reason, plan, and act on
+      behalf of users.
+    </p>
+
+    <p>
+      As an architect, I found this deeply exciting. The patterns I'd spent years perfecting —
+      separation of concerns, composable services, clean API contracts — all translated
+      beautifully into the world of AI agents. The difference? The "consumer" of those services
+      was no longer just a user clicking a button. It was an intelligent agent making decisions.
+    </p>
+
+    <h2>What Changed in My Toolkit</h2>
+
+    <ul>
+      <li><strong>Prompt Engineering</strong> became as important as Apex development. Crafting
+      the right system prompts, grounding techniques, and guardrails is now a core architectural skill.</li>
+      <li><strong>RAG (Retrieval-Augmented Generation)</strong> allowed us to connect agents to
+      enterprise knowledge bases, making responses contextual and accurate.</li>
+      <li><strong>MCP (Model Context Protocol)</strong> opened the door to orchestrating multiple
+      AI models and tools within a single agent workflow.</li>
+      <li><strong>Agent Orchestration with n8n</strong> gave us the flexibility to chain together
+      complex multi-step processes that span Salesforce and external systems.</li>
+    </ul>
+
+    <h2>Lessons from the Field</h2>
+
+    <blockquote>
+      The best AI agents aren't the ones that do the most — they're the ones that know when to
+      ask for help and when to act autonomously.
+    </blockquote>
+
+    <p>
+      Building autonomous agents for enterprise clients taught me that trust is everything.
+      Users need to understand what the agent is doing and why. Transparency in AI decision-making
+      isn't optional — it's a requirement for adoption.
+    </p>
+
+    <h2>Looking Ahead</h2>
+
+    <p>
+      The transition from "Architect" to "Agentblazer" isn't about abandoning what came before.
+      It's about evolving the craft. The fundamentals of good architecture — modularity,
+      scalability, maintainability — are more relevant than ever in the AI era. They just
+      manifest differently.
+    </p>
+
+    <p>
+      If you're a Salesforce architect considering the AI path, my advice is simple: start
+      building. Pick one use case, one agent, one experiment. The ecosystem is moving fast,
+      and the best way to learn is by doing.
+    </p>
+  </article>
+
+  <footer class="blog-footer">
+    &copy; 2026 Sai Sagar Chilakapati &middot;
+    <a href="../index.html" style="color:var(--brand);text-decoration:none;font-weight:600;">Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>
